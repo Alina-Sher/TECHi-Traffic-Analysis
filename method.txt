@@ -1,0 +1,16 @@
+Method
+
+Part 1: Article dataset
+I collected the 20 newest articles shown on each of TECHi’s six category pages: AI, Markets, Crypto, Breakthroughs, Policy, and Guides, giving 120 section-level rows in total. I kept an article in each section where it appeared because the task asks for the 20 newest articles per category; overlapping URLs across categories were therefore not deduplicated. The date_shown field was preserved verbatim from the page. Headline word count was calculated from the headline text. The names_a_company and contains_a_number fields were coded consistently using the same rules across all rows. I checked the final CSV for 120 rows, 20 rows per section, missing values, blank fields, and author-profile URLs.
+
+Part 2: Traffic analysis
+The supplied traffic table was treated as invented assessment data and kept separate from the public article dataset. Monthly total sessions were calculated by summing the six section values. I did not treat September 2025 to August 2026 as a YoY comparison because prior-year traffic was not provided, so the claim that traffic was “up 30% YoY” cannot be verified from the supplied data.
+
+A major measurement discontinuity occurs in February 2026, immediately after the site-wide analytics snippet change on 1 February. Total reported sessions increased 48.0% from January to February, with similar increases across sections. I estimated the measurement factor using January-to-February traffic excluding Guides (89,465 / 60,300 = 1.4837) and used it only as an approximate adjustment to August reported traffic.
+
+The November Crypto spike was treated separately because Crypto traffic increased sharply from October to November and then returned close to its previous level in December. Newsletter signups were analyzed separately because the analytics change makes a simple session-to-signup conversion trend difficult to interpret.
+
+Limitations
+The Part 1 dataset is a current snapshot and cannot reconstruct historical monthly publishing volume. The supplied traffic table has no prior-year comparison data, and the February analytics change means pre- and post-February session counts are not directly comparable. The underlying traffic estimate is therefore an approximation, not a precise measurement.
+
+
